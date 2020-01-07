@@ -1,15 +1,24 @@
 .fullheight-block {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #bly-section {
     display: grid;
     grid-template:
-    "bly img"
+    "bly  img"
     "desc img";
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    overflow: hidden;
+    grid-template-rows: auto auto;
+}
+
+@media all and (max-width: 800px) {
+    #bly-section {
+        grid-template:
+        "bly"
+        "img"
+        "desc";
+        grid-template-rows: 1fr 1fr auto;
+    }
 }
 
 #bly {
@@ -24,8 +33,8 @@
 #bly-section > .img {
     grid-template: img;
     width: 100%;
-    height: auto;
-    overflow: hidden;
+    object-fit: cover;
+    height: 100%;
 }
 #bly-section > .desc {
     padding: 1em;
