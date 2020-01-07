@@ -9,7 +9,7 @@
     "desc img";
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
-    
+    overflow: hidden;
 }
 
 #bly {
@@ -31,4 +31,57 @@
     padding: 1em;
     grid-template: desc;
     font-size: 1.5m;
+}
+
+
+#prices {
+    display: flex;
+}
+#prices .price {
+    flex: 1;
+    background: rgb(228, 228, 228);
+    margin-right: 10px;
+    padding: 1em;
+    display: grid;
+    grid-template-areas:
+    "header"
+    "description"
+    "footer";
+    grid-template-rows: auto 1fr auto;
+}
+#prices .price:last-child {
+    margin-right: 0;
+}
+#prices .price:nth-child(1) {
+    background-color: rgb(28, 119, 255);
+    color: white;
+}
+
+.price footer {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.price h2 {
+    grid-template: header;
+}
+.price p {
+    grid-template: description;
+}
+
+.v-centered {
+    display: flex;
+}
+
+.v-centered > div {
+    align-self: center;
+    margin: auto;
+}
+#telegram {
+    font-size: 2.5em;
+    color: white;
+    background: linear-gradient(rgb(31, 83, 255), rgb(133, 26, 255))
+}
+#telegram a {
+    color: white;
 }
