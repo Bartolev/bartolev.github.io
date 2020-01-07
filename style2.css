@@ -1,0 +1,34 @@
+.fullheight-block {
+    height: 100vh;
+}
+
+#bly-section {
+    display: grid;
+    grid-template:
+    "bly img"
+    "desc img";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+}
+
+#bly {
+    grid-template: bly;
+    font-weight: 400;
+    font-size: 3em;
+    padding: 1em;
+}
+#bly span {
+    font-weight: 800;
+}
+#bly-section > .img {
+    grid-template: img;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+#bly-section > .desc {
+    padding: 1em;
+    grid-template: desc;
+    font-size: 1.5m;
+}
